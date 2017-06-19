@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="page1 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-appearance-options.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>Theme Options</h4>
+        <p>This is a very important section as it's the area which contains all miscellaneous content featured throughout the site</p>
+      </li>
+
+      <li data-text="Next">
+        <p>If you're unable to find where to edit some content on your site, always check here first!</p>
+      </li>
+
+      <li data-text="Next">
+        <p>Content here could include: contact details, links to social network accounts, alternative page headings and many other snippets of content that cannot be found within the Pages section.</p>
+      </li>
+
+      <li data-text="Finish">
+        <p>That's it! If you need any more help with managing your site, email <a href="mailto:webteam@juicecreative.co.uk">webteam@juicecreative.co.uk</a></p>
+      </li>
+
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 3) {
+            window.location.href = 'http://www.juicecreative.co.uk';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

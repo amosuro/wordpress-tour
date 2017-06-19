@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="post-edit1 point">&nbsp;</div>
+    <div class="post-edit2 point">&nbsp;</div>
+    <div class="post-edit3 point">&nbsp;</div>
+    <div class="post-edit4 point">&nbsp;</div>
+    <div class="post-edit5 point">&nbsp;</div>
+    <div class="post-edit6 point">&nbsp;</div>
+    <div class="post-edit7 point">&nbsp;</div>
+    <div class="post-edit8 point">&nbsp;</div>
+    <div class="post-edit9 point">&nbsp;</div>
+    <div class="post-edit10 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-posts-edit.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>Editing a Post</h4>
+        <p>This is the Edit Post screen. The only difference between this screen and the Add New screen is that it's already populated with content!</p>
+      </li>
+
+      <li data-class="post-edit1" data-text="Next">
+        <p>You can edit the Post's title here - note that immediately below it will automatically generate a link based on what you type in.</p>
+      </li>
+
+      <li data-class="post-edit2" data-text="Next">
+        <p>If you want to edit that link, just click on this button!</p>
+      </li>
+
+      <li data-class="post-edit3" data-text="Next">
+        <p>This is the Post's editor panel. Not only can you type out content here, but you can also add just about any type of media - pdfs, images, videos and more!</p>
+      </li>
+
+      <li data-class="post-edit4" data-text="Next">
+        <p>This is the Kitchen sink button. Clicking this will reveal even more options to control the formatting of text (Headings, paragraphs, blockquotes)</p>
+      </li>
+
+      <li data-class="post-edit5" data-text="Next">
+        <p>If you want to preview what the post will look like to your visitors before publishing it's changes, click here to preview the changes first</p>
+      </li>
+
+      <li data-class="post-edit6" data-text="Next">
+        <p>You can change the status of a post, if you decide to unpublish it, or publish a draft post</p>
+      </li>
+
+      <li data-class="post-edit7" data-text="Next">
+        <p>If you want to change the date at which a post has been published, you can click here to edit the date and time</p>
+      </li>
+
+      <li data-class="post-edit8" data-text="Next">
+        <p>Here is the Categories panel where you can assign categories to the post and add new ones too!</p>
+      </li>
+
+      <li data-class="post-edit9" data-text="Next">
+        <p>Just like this the Categories panel, you can manage all of your tags here</p>
+      </li>
+
+      <li data-class="post-edit10" data-text="Next">
+        <p>Depending on the design of your website, your posts may have the ability to assign an image to them. Click here to upload or select an exisiting image from your Media library</p>
+      </li>
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 10) {
+            window.location.href = 'media.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

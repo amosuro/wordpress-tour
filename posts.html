@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="post1 point">&nbsp;</div>
+    <div class="post2 point">&nbsp;</div>
+    <div class="post3 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-posts.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>The Posts section</h4>
+        <p>This is the area for you to add, delete or edit your blog/news posts on the website</p>
+      </li>
+
+      <li data-class="post1" data-text="Next">
+        <p>You can switch between different Post status - viewing any posts that have already been published, pending review or in the trash</p>
+      </li>
+
+      <li data-class="post2" data-text="Next">
+        <p>If you have a lot of Posts, you can use the filters here to refine a search</p>
+      </li>
+
+      <li data-class="post3" data-text="Next">
+        <p>This is the Post's title, which you can click on to navigate to that Post's edit screen</p>
+      </li>
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 3) {
+            window.location.href = 'posts-edit.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

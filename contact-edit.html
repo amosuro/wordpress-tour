@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="contact-edit1 point">&nbsp;</div>
+    <div class="contact-edit2 point">&nbsp;</div>
+    <div class="contact-edit3 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-contact-edit.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>Editing a Form</h4>
+        <p>Whilst we do not recommend editing this section, if you have basic HTML knowledge you can adjust a few settings without much trouble. We'll show you the areas which can be edited without HTML knowledge.</p>
+      </li>
+
+      <li data-class="contact-edit1" data-text="Next">
+        <p>This field allows you to change the email address that gets notified when a user submits this form</p>
+      </li>
+
+      <li data-class="contact-edit2" data-text="Next">
+        <p>If you would like to receive a different subject line when you are notified, simply edit the text inside here</p>
+      </li>
+
+      <li data-class="contact-edit3" data-text="Next">
+        <p>All of the fields featured here are the response messages displayed to a user when filling out a form. Feel free to edit the text here!</p>
+      </li>
+
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 3) {
+            window.location.href = 'appearance-menus.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

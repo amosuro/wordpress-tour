@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="dashboard1 point">&nbsp;</div>
+    <div class="dashboard2 point">&nbsp;</div>
+    <div class="dashboard3 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>Welcome to Juice Creative's Wordpress Tour!</h4>
+        <p>This is a tour to managing your Wordpress site and getting familiar with the admin area sections</p>
+      </li>
+
+      <li data-text="Let's go!">
+        <p>This tour covers the common sections featured in all Wordpress websites, but since all websites are unique you may find that your admin area looks slightly different. If you're still stuck, just give us a call!</p>
+      </li>
+
+      <li data-class="dashboard1" data-text="Next">
+        <p>This is the first screen you'll see when logging in, and this particular section gives you a quick overview of the content on your site</p>
+      </li>
+
+      <li data-class="dashboard2" data-text="Next">
+        <p>You can quickly type up a Draft here, which will create a draft article in your Posts section</p>
+      </li>
+
+      <li data-class="dashboard3" data-text="Next">
+        <p>If you have more than one user for Wordpress, you can view all recent activity here</p>
+      </li>
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 4) {
+            window.location.href = 'posts.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

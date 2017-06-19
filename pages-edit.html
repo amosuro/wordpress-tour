@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="page-edit1 point">&nbsp;</div>
+    <div class="page-edit2 point">&nbsp;</div>
+    <div class="page-edit3 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-pages-edit.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>Editing a Page</h4>
+        <p>This is the Edit Page screen. You'll very quickly become familiar with this section, since it's usually the pages on your site that need the most maintenance!</p>
+      </li>
+
+      <li data-text="Next">
+        <p>Since there are a number of panels here that are featured in the Posts section, we'll only focus on the differences</p>
+      </li>
+
+      <li data-class="page-edit1" data-text="Next">
+        <p>On this particular page, there's a notice explaining that Wordpress has an autosave version of the page. This usually occurs if you were editing a page's content and quit the browser unexpectedly. Wordpress tries to recover what you were working on!</p>
+      </li>
+
+      <li data-class="page-edit2" data-text="Next">
+        <p>Page Attributes is a new panel that is exclusive to the Edit Page section. It allows you to assign a different page layout (if applicable) to the page. In most cases, you won't need to edit this at all.</p>
+      </li>
+
+      <li data-class="page-edit3" data-text="Next">
+        <p>Whilst the Featured Image panel appears on the Posts section, in this particular case the Featured Image could relate to a number of different parts of the page depending on your website's design. E.g. on some sites it may control the header image used on that particular page</p>
+      </li>
+
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 4) {
+            window.location.href = 'contact.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

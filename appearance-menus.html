@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="appearance-menus1 point">&nbsp;</div>
+    <div class="appearance-menus2 point">&nbsp;</div>
+    <div class="appearance-menus3 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-appearance-menus.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>Managing Menus</h4>
+        <p>This section allows you to manage the menus featured on the site. In most cases there will be at least one menu here, but sometimes you can have access to the menus featured in a footer for example</p>
+      </li>
+
+      <li data-text="Next">
+        <p>Be careful when editing the website's menus, because depending on the design of your website you may break the layout depending on what you change</p>
+      </li>
+
+      <li data-class="appearance-menus1" data-text="Next">
+        <p>You can switch to edit different menus using this dropdown</p>
+      </li>
+
+      <li data-class="appearance-menus2" data-text="Next">
+        <p>This left panel allows you to browse through all of the website's pages/posts/categories/links so that you can add them to the menu in the right panel</p>
+      </li>
+
+      <li data-class="appearance-menus3" data-text="Next">
+        <p>In this panel you can see all of the menu items in the selected menu. Simply drag and drop to change the ordering!</p>
+      </li>
+
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 4) {
+            window.location.href = 'appearance-options.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

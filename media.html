@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordpress Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Attach our CSS -->
+    <link rel="stylesheet" href="joyride-2.1.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <div class="custom-container">
+    <div class="media1 point">&nbsp;</div>
+    <div class="media2 point">&nbsp;</div>
+    <img src="images/screengrabs/wordpress-dashboard-media.png" />
+  </div>
+
+      <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+        <li data-text="Next">
+        <h4>The Media section</h4>
+        <p>The Media Section is where you'll find all media that has been uploaded to your website, this includes images, documents and videos</p>
+      </li>
+
+      <li data-text="Next">
+        <p>The interface is very similar to the Posts section, so you will very quickly become familiar with the filtering options and how to manage different media items</p>
+      </li>
+
+      <li data-class="media1" data-text="Next">
+        <p>This is an important column that doesn't feature in the Posts section. It tells you exactly where on the website this particular media item is used.</p>
+      </li>
+    </ol>
+
+    <!-- Run the plugin -->
+    <script type="text/javascript" src="jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="modernizr.mq.js"></script>
+    <script type="text/javascript" src="jquery.joyride-2.1.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#joyRideTipContent').joyride({
+          autoStart : true,
+          postStepCallback : function (index, tip) {
+          if (index == 2) {
+            window.location.href = 'pages.html';
+          }
+        },
+        modal:true,
+        expose: true
+        });
+      });
+    </script>
+
+  </body>
+</html>
